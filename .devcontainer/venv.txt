@@ -1,0 +1,15 @@
+ https://docs.astral.sh/uv/getting-started/installation/#installation-methods
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+uv venv --python 3.12
+source .venv/bin/activate
+
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+uv pip install torch_geometric torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric --no-build-isolation
+uv pip install scikit-learn darts \
+polars duckdb pandas pyarrow seaborn plotly \
+python-dotenv xgboost \
+jupyterlab jupyterlab-git ipywidgets \
+pytest pylint rsconnect-python
+
+uv pip install networkx matplotlib node2vec umap-learn
